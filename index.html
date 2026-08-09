@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron Capiral | Lead Systems Architect & Developer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        osm: {
+                            blue: '#0052FF',
+                            cyan: '#00D2FF',
+                            accent: '#021029',
+                            card: '#081329',
+                            border: '#11254A',
+                            glow: 'rgba(0, 210, 255, 0.4)'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        cinzel: ['Cinzel', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons & Google Fonts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=JetBrains+Mono:wght@400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 osm-grid min-h-screen">
+
+    <!-- Atmospheric Ambient Lights -->
+    <div class="fixed top-0 left-1/3 w-[600px] h-[600px] bg-osm-blue/10 rounded-full blur-[160px] pointer-events-none"></div>
+    <div class="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-osm-cyan/10 rounded-full blur-[160px] pointer-events-none"></div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-osm-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-mafia text-xl font-black text-white tracking-widest flex items-center gap-3">
+                <span class="p-2 rounded-lg bg-osm-blue/20 border border-osm-cyan/40 text-osm-cyan glow-cyan">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </span>
+                AARON CAPIRAL<span class="text-osm-cyan">.DEV</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
+                <a href="#about" class="hover:text-osm-cyan transition-colors">Operative</a>
+                <a href="#console" class="hover:text-osm-cyan transition-colors">Interactive Terminal</a>
+                <a href="#stack" class="hover:text-osm-cyan transition-colors">Arsenal</a>
+                <a href="#projects" class="hover:text-osm-cyan transition-colors">Operations</a>
+                <a href="#experience" class="hover:text-osm-cyan transition-colors">Track Record</a>
+            </nav>
+
+            <a href="#contact" class="px-5 py-2.5 text-xs font-bold uppercase font-mafia bg-gradient-to-r from-osm-blue to-osm-cyan hover:from-osm-cyan hover:to-white text-black rounded transition-all glow-cyan flex items-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i> Dispatch
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 space-y-28">
+
+        <!-- Hero Operative Banner -->
+        <section id="about" class="pt-6 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div class="flex-1 space-y-8">
+                <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full text-xs font-bold code-font bg-osm-blue/20 border border-osm-cyan/40 text-osm-cyan">
+                    <span class="w-2.5 h-2.5 rounded-full bg-osm-cyan animate-pulse"></span>
+                    O SIDE MAFIA DIVISION | SOLE AUTHORIZED ARCHITECT
+                </div>
+                
+                <div class="space-y-4">
+                    <h1 class="text-5xl sm:text-7xl font-black text-white font-mafia tracking-wide leading-none">
+                        AARON CAPIRAL
+                    </h1>
+                    <p class="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-osm-cyan via-blue-300 to-osm-blue">
+                        Lead Systems Developer & Web Architect
+                    </p>
+                    <p class="text-slate-400 text-base max-w-2xl leading-relaxed">
+                        Philippines-based developer specialized in high-performance FiveM game engine scripts, enterprise Java systems, and award-winning Capstone AI software.
+                    </p>
+                </div>
+
+                <!-- Stats Badges -->
+                <div class="grid grid-cols-3 gap-4 max-w-lg">
+                    <div class="osm-card p-4 rounded-xl border-l-4 border-l-osm-cyan">
+                        <div class="text-2xl font-bold font-mafia text-white">4+ Yrs</div>
+                        <div class="text-[11px] text-slate-400 font-semibold uppercase">Systems Dev</div>
+                    </div>
+                    <div class="osm-card p-4 rounded-xl border-l-4 border-l-osm-blue">
+                        <div class="text-2xl font-bold font-mafia text-white">6+</div>
+                        <div class="text-[11px] text-slate-400 font-semibold uppercase">FiveM Networks</div>
+                    </div>
+                    <div class="osm-card p-4 rounded-xl border-l-4 border-l-osm-cyan">
+                        <div class="text-2xl font-bold font-mafia text-white">#1</div>
+                        <div class="text-[11px] text-slate-400 font-semibold uppercase">Capstone AI</div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 pt-2">
+                    <a href="#projects" class="px-6 py-3.5 text-xs font-bold uppercase font-mafia bg-osm-cyan hover:bg-white text-black rounded transition-all glow-cyan flex items-center gap-2">
+                        <i data-lucide="crosshair" class="w-4 h-4"></i> View Operations
+                    </a>
+                    <a href="https://santarosarp.github.io/SantarosaRp/" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 text-xs font-bold uppercase font-mafia text-osm-cyan osm-card hover:bg-osm-accent rounded transition-all flex items-center gap-2">
+                        <i data-lucide="external-link" class="w-4 h-4"></i> Live Project Portal
+                    </a>
+                </div>
+            </div>
+
+            <!-- Terminal Component -->
+            <div id="console" class="w-full lg:w-[500px] osm-card rounded-2xl overflow-hidden border border-osm-border code-font text-xs">
+                <div class="bg-slate-900/90 px-4 py-3 border-b border-osm-border flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                        <span class="text-slate-400 text-[11px] ml-2">aaron_capiral_terminal.sh</span>
+                    </div>
+                    <span class="text-osm-cyan text-[10px] uppercase font-bold tracking-widest">OSM SECURE</span>
+                </div>
+                
+                <div class="p-5 space-y-3 bg-black/60 min-h-[260px]">
+                    <p class="text-slate-500">// Welcome to Aaron Capiral's Command Interface.</p>
+                    <p class="text-slate-400">Type <span class="text-osm-cyan font-bold">'help'</span> to view available system commands.</p>
+                    <div id="terminalOutput" class="space-y-2 text-slate-300"></div>
+                    <div class="flex items-center gap-2 text-osm-cyan pt-2">
+                        <span>root@capiral-dev:~$</span>
+                        <input type="text" id="terminalInput" autocomplete="off" class="bg-transparent border-none outline-none text-white w-full code-font" placeholder="type command...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Stack -->
+        <section id="stack" class="space-y-8">
+            <div class="flex items-center justify-between border-b border-osm-border pb-4">
+                <h2 class="text-2xl font-bold font-mafia text-white flex items-center gap-3">
+                    <i data-lucide="cpu" class="text-osm-cyan w-6 h-6"></i> TECHNICAL ARSENAL
+                </h2>
+                <span class="text-xs code-font text-osm-cyan uppercase">Verified Core Languages</span>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="osm-card p-5 rounded-xl text-center space-y-3">
+                    <div class="w-12 h-12 mx-auto rounded-lg bg-blue-950/60 border border-blue-500/30 text-osm-cyan flex items-center justify-center font-bold code-font text-lg">JAVA</div>
+                    <div class="text-sm font-bold text-white font-mafia">Java</div>
+                    <div class="text-[11px] text-slate-400">Enterprise Backend</div>
+                </div>
+                <div class="osm-card p-5 rounded-xl text-center space-y-3">
+                    <div class="w-12 h-12 mx-auto rounded-lg bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-bold code-font text-lg">LUA</div>
+                    <div class="text-sm font-bold text-white font-mafia">Lua</div>
+                    <div class="text-[11px] text-slate-400">FiveM Engine Logic</div>
+                </div>
+                <div class="osm-card p-5 rounded-xl text-center space-y-3">
+                    <div class="w-12 h-12 mx-auto rounded-lg bg-blue-900/60 border border-blue-400/30 text-blue-300 flex items-center justify-center font-bold code-font text-lg">C#</div>
+                    <div class="text-sm font-bold text-white font-mafia">C#</div>
+                    <div class="text-[11px] text-slate-400">Runtime Systems</div>
+                </div>
+                <div class="osm-card p-5 rounded-xl text-center space-y-3">
+                    <div class="w-12 h-12 mx-auto rounded-lg bg-indigo-950/60 border border-indigo-500/30 text-indigo-300 flex items-center justify-center font-bold code-font text-lg">JS</div>
+                    <div class="text-sm font-bold text-white font-mafia">JavaScript</div>
+                    <div class="text-[11px] text-slate-400">Full Stack & NUI</div>
+                </div>
+                <div class="osm-card p-5 rounded-xl text-center space-y-3">
+                    <div class="w-12 h-12 mx-auto rounded-lg bg-sky-950/60 border border-sky-500/30 text-sky-400 flex items-center justify-center font-bold code-font text-lg">CSS3</div>
+                    <div class="text-sm font-bold text-white font-mafia">CSS3</div>
+                    <div class="text-[11px] text-slate-400">Modern Dark UI</div>
+                </div>
+                <div class="osm-card p-5 rounded-xl text-center space-y-3">
+                    <div class="w-12 h-12 mx-auto rounded-lg bg-slate-900/80 border border-slate-500/30 text-slate-300 flex items-center justify-center font-bold code-font text-lg">HTML5</div>
+                    <div class="text-sm font-bold text-white font-mafia">HTML5</div>
+                    <div class="text-[11px] text-slate-400">Semantic Web</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Operations -->
+        <section id="projects" class="space-y-8">
+            <div class="border-b border-osm-border pb-4 flex items-center justify-between">
+                <h2 class="text-2xl font-bold font-mafia text-white flex items-center gap-3">
+                    <i data-lucide="folder-git-2" class="text-osm-cyan w-6 h-6"></i> DEPLOYED OPERATIONS
+                </h2>
+                <span class="text-xs code-font text-slate-400 uppercase">Live Showcase</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Santa Rosa RP Project -->
+                <div class="osm-card rounded-2xl p-8 space-y-6 flex flex-col justify-between border-osm-cyan/40">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="p-3 bg-osm-cyan/20 border border-osm-cyan/50 text-osm-cyan rounded-xl">
+                                <i data-lucide="globe" class="w-6 h-6"></i>
+                            </span>
+                            <span class="text-[10px] font-bold code-font text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1 rounded-full uppercase">Live Website</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-mafia text-white">Santa Rosa Roleplay Web Portal</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Official website engineered for Santa Rosa RP featuring responsive application portals, server rulebooks, and Discord API integrations.
+                        </p>
+                    </div>
+                    <a href="https://santarosarp.github.io/SantarosaRp/" target="_blank" rel="noopener noreferrer" class="w-full text-center py-3.5 px-4 text-xs font-bold font-mafia uppercase tracking-wider bg-osm-cyan hover:bg-white text-black rounded-xl transition-all glow-cyan flex items-center justify-center gap-2 cursor-pointer">
+                        <i data-lucide="external-link" class="w-4 h-4"></i> VISIT SANTA ROSA RP
+                    </a>
+                </div>
+
+                <!-- La Provinsia RP Project -->
+                <div class="osm-card rounded-2xl p-8 space-y-6 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="p-3 bg-osm-blue/20 border border-osm-cyan/40 text-osm-cyan rounded-xl">
+                                <i data-lucide="server" class="w-6 h-6"></i>
+                            </span>
+                            <span class="text-[10px] font-bold code-font text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1 rounded-full uppercase">FiveM Framework</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-mafia text-white">La Provinsia Roleplay Architecture</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Lead developer for core gameplay mechanics, custom lua scripts, client interface optimization, and database architecture.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-2.5 py-1 bg-slate-900 text-slate-300 text-xs rounded border border-osm-border font-medium">BGC RP</span>
+                        <span class="px-2.5 py-1 bg-slate-900 text-slate-300 text-xs rounded border border-osm-border font-medium">Mobtown RP</span>
+                        <span class="px-2.5 py-1 bg-slate-900 text-slate-300 text-xs rounded border border-osm-border font-medium">The Culture RP</span>
+                    </div>
+                </div>
+
+                <!-- Capstone Project -->
+                <div class="osm-card rounded-2xl p-8 space-y-6 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="p-3 bg-osm-cyan/20 border border-osm-cyan/40 text-osm-cyan rounded-xl">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </span>
+                            <span class="text-[10px] font-bold code-font text-osm-cyan bg-osm-blue/20 border border-osm-cyan/30 px-3 py-1 rounded-full uppercase">Capstone Winner</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-mafia text-white">Periodica AI Engine</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            AI system engineered for STI College Caloocan. Recognized for outstanding product design, performance, and architecture.
+                        </p>
+                    </div>
+                    <div class="text-xs font-bold text-osm-cyan font-mafia uppercase flex items-center gap-2">
+                        <i data-lucide="trophy" class="w-4 h-4"></i> Best Product Capstone 2024
+                    </div>
+                </div>
+
+                <!-- Web Portal -->
+                <div class="osm-card rounded-2xl p-8 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="p-3 bg-blue-950/40 border border-blue-500/30 text-blue-400 rounded-xl">
+                            <i data-lucide="layout" class="w-6 h-6"></i>
+                        </span>
+                        <span class="text-[10px] font-bold code-font text-blue-400 bg-blue-950/60 border border-blue-500/30 px-3 py-1 rounded-full uppercase">Web App</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-mafia text-white">FiveM Web Dashboard</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Interactive player statistics dashboard and community portal connected to real-time MySQL game databases.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="space-y-8">
+            <div class="border-b border-osm-border pb-4">
+                <h2 class="text-2xl font-bold font-mafia text-white flex items-center gap-3">
+                    <i data-lucide="shield" class="text-osm-cyan w-6 h-6"></i> FIELD RECORD & EDUCATION
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="osm-card p-8 rounded-2xl space-y-4 border-l-4 border-l-osm-cyan">
+                    <span class="text-xs code-font text-osm-cyan font-bold">JAN 2022 – NOV 2025</span>
+                    <h3 class="text-xl font-bold font-mafia text-white">FiveM Lead Developer</h3>
+                    <p class="text-xs font-bold text-slate-400 code-font">Multi-Server Communities</p>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Engineered, refactored, and optimized server scripts using Lua and C#. Maintained low-latency server tick rates across high player-count servers.
+                    </p>
+                </div>
+
+                <div class="osm-card p-8 rounded-2xl space-y-4 border-l-4 border-l-osm-blue">
+                    <span class="text-xs code-font text-osm-cyan font-bold">2024 – PRESENT</span>
+                    <h3 class="text-xl font-bold font-mafia text-white">BS Information Technology</h3>
+                    <p class="text-xs font-bold text-slate-400 code-font">Lyceum of the Philippines University</p>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Focusing on advanced computing, Java enterprise architecture, database systems, and full-stack software development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="osm-card p-8 sm:p-12 rounded-3xl text-center space-y-6 max-w-3xl mx-auto border-osm-cyan/30">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold code-font bg-osm-blue/20 text-osm-cyan border border-osm-cyan/30">
+                    <i data-lucide="lock" class="w-3.5 h-3.5"></i> SECURE DISPATCH
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold font-mafia text-white">INITIATE CONTACT WITH AARON CAPIRAL</h2>
+                <p class="text-slate-400 text-sm">Open for Lead Developer roles, FiveM script optimizations, Java backend systems, and custom web architecture.</p>
+                
+                <a href="mailto:contact@example.com" class="inline-flex items-center gap-2 px-8 py-4 text-xs font-bold font-mafia uppercase tracking-wider bg-osm-cyan hover:bg-white text-black rounded-xl transition-all glow-cyan">
+                    <i data-lucide="mail" class="w-4 h-4"></i> Transmit Direct Email
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-osm-border py-8 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6 text-center text-xs code-font text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-slate-300 font-mafia">AARON CAPIRAL — O SIDE MAFIA EXCLUSIVE PORTFOLIO</p>
+            <p class="text-slate-500">Protected Architecture Engine</p>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
